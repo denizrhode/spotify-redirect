@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Yönlendiriliyor…</title>
+
+  <!-- GA4 tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');          // page-view
+    gtag('event', 'spotify_click');       // <-- the conversion Google Ads will import
+
+    // redirect after tag request is fired
+    setTimeout(function () {
+      window.location.href = 'SPOTIFY_TRACK_URL';
+    }, 600);      // 600 ms = sweet spot: tag loads, user barely notices
+  </script>
+
+  <style>
+    body{display:flex;justify-content:center;align-items:center;height:100vh;font:18px/1.4 sans-serif}
+  </style>
+</head>
+<body>
+  <div>Spotify’a yönlendiriliyorsunuz…</div>
+</body>
+</html>
